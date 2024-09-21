@@ -24,7 +24,6 @@ alias pg='ping google.com -c3'
 alias pi='kitty +kitten icat'
 alias rd='rm -rf'
 alias sl='sudo btrfs subvolume list -ta'
-alias t='btop'
 alias v='nvim'
 alias w='expr $(hyprctl clients -j | python ~/.config/scripts/count-windows.py) - 1'
 
