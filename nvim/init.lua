@@ -75,3 +75,4 @@ vim.api.nvim_create_user_command("Run", run, {})
 
 vim.api.nvim_set_keymap("n", "<C-d>", ":Run<CR>", { noremap = true, silent = true })
 -----------------------------------------------------------------------------------------------------
+require('nvim-highlight-colors').setup({})
