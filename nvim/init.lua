@@ -34,11 +34,11 @@ vim.keymap.set('n', '<Tab>', ':bn<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-w>', ':bdelete!<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-t>', ':enew<CR>', { noremap = true, silent = true })
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false
-    }
-)
+--vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+--    vim.lsp.diagnostic.on_publish_diagnostics, {
+--        virtual_text = false
+--    }
+--)
 -----------------------------------------------------------------------------------------------------
 local function run()
     -- Get the current buffer's file name and file type
