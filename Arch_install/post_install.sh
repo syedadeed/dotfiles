@@ -40,14 +40,12 @@ install_packages ()
     sudo systemctl enable bluetooth.service
     sudo pacman -S --noconfirm yazi
     sudo pacman -S --noconfirm poppler
-    sudo pacman -S --noconfirm ntfs-3g
     sudo pacman -S --noconfirm bat
     sudo pacman -S --noconfirm zoxide
     sudo pacman -S --noconfirm fzf
     sudo pacman -S --noconfirm grim
     sudo pacman -S --noconfirm slurp
     sudo pacman -S --noconfirm wl-clipboard
-    sudo pacman -S --noconfirm dunst
     sudo pacman -S --noconfirm libnotify
     sudo pacman -S --noconfirm kitty
     sudo pacman -S --noconfirm swww
@@ -66,18 +64,8 @@ install_packages ()
     sudo pacman -S --noconfirm zen-browser-bin
 }
 
-config_files (){
-    git clone https://github.com/syedadeed/dotfiles.git
-    rm ~/.bash_profile ~/.bashrc
-    mv dotfiles/.bashrc dotfiles/.bash_profile ~
-    mv dotfiles/.gitconfig ~
-    rm -rf dotfiles/.git
-    mv dotfiles/* ~/.config
-    rm -rf dotfiles
-}
 configure_wifi
 update_hostname
 install_packages
-config_files
 
 #hyprpicker, brillo, xremap, matugen cursor theme, fonts
