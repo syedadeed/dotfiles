@@ -3,6 +3,7 @@ export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
 shopt -s dotglob
 alias b='bluetoothctl'
+alias u='sudo pacman -Syyu'
 alias bd='z "$OLDPWD"'
 alias cat='bat --wrap=never'
 alias cd='cd_ls'
