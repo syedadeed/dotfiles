@@ -12,10 +12,6 @@ pre_setup ()
 disk_setup ()
 {
     #--------------------------------Disk Selection--------------------------------------
-    #local disk_list=$(fdisk -l | grep '^Disk /dev/' | awk '{print $2}' | sed 's/://')
-    #echo "Select a Disk:"
-    #disk=$(echo "$disk_list" | smenu -c -W $'\n' -N -q)
-
     lsblk
     echo "Enter the disk name(format = /dev/sdx): "
     read disk
