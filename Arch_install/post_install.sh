@@ -40,7 +40,6 @@ install_packages ()
     sudo systemctl enable bluetooth.service
     sudo pacman -S --noconfirm yazi
     sudo pacman -S --noconfirm poppler
-    sudo pacman -S --noconfirm btop
     sudo pacman -S --noconfirm ntfs-3g
     sudo pacman -S --noconfirm bat
     sudo pacman -S --noconfirm zoxide
