@@ -1,0 +1,58 @@
+PS1='(\u@\h \W)\$ '
+export EDITOR="nvim"
+export HISTCONTROL="ignoredups:erasedups"
+shopt -s dotglob
+alias b='bluetoothctl'
+alias bd='z "$OLDPWD"'
+alias cat='bat --wrap=never'
+alias cd='cd_ls'
+alias cls='clear'
+alias cn='bluetoothctl connect D4:CD:DA:35:A5:E9'
+alias cp='cp -ir'
+alias du='du -h'
+alias ep='kitten unicode-input | wl-copy -n'
+alias f='yazi'
+alias grep='grep --color=auto'
+alias h='kitten @ send-text "$(/usr/bin/cat ~/.bash_history | awk '\''!seen[$0]++'\'' | tac | fzf --no-scrollbar --info inline --height 40% --layout=reverse --border)\f"'
+alias l='ls -A'
+alias ll='ls -lAh'
+alias ls='ls --color=auto --hyperlink=auto'
+alias mkdir='mkdir -p'
+alias mv='mv -i'
+alias pg='ping google.com -c3'
+alias pi='kitty +kitten icat'
+alias rd='rm -rf'
+alias sl='sudo btrfs subvolume list -ta'
+alias t='btop'
+alias v='nvim'
+alias w='expr $(hyprctl clients -j | python ~/.config/scripts/count-windows.py) - 1'
+
+cd_ls () 
+{ 
+    z "$@" && ls --color=auto --hyperlink=auto
+}
+
+force-clear () 
+{ 
+    printf "\e[H\e[3J"
+}
+
+up () 
+{ 
+    local d="";
+    limit=$1;
+    for ((i = 1; i <= limit; i++))
+    do
+        d=$d/..;
+    done;
+    d=$(echo $d | sed 's/^\///');
+    if [ -z "$d" ]; then
+        d=..;
+    fi;
+    cd_ls $d
+}
+eval "$(zoxide init bash)"
+bind '"\C-f":"zi\n"'
+bind '"\C-h":"h\n"'
+bind '"\C-x":"force-clear\n"'
+bind "set completion-ignore-case on"

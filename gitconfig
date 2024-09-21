@@ -1,0 +1,11 @@
+[init]
+	defaultBranch = main
+[user]
+	email = syedadeed@protonmail.com
+	name = Syed Adeed
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
