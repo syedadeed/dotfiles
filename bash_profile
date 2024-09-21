@@ -3,4 +3,4 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-Hyprland
+Hyprland > /dev/null
