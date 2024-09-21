@@ -82,4 +82,4 @@ update_hostname
 install_packages
 config_files
 
-#hyprpicker, brillo, xremap, cursor theme, fonts
+#hyprpicker, brillo, xremap, matugen cursor theme, fonts
