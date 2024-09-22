@@ -1,2 +1,0 @@
-colour pallette(matugen)
-bat, fzf, hyprland, kitty, neovim, zen-browser-bin, xdg-desktop-portal
