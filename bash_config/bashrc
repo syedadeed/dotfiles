@@ -1,4 +1,5 @@
-PS1='(\u@\h \W)\$ '
+#PS1='(\u@\h \W)\$ '
+PS1=''
 export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
 shopt -s dotglob
