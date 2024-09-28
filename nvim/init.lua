@@ -18,8 +18,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-vim.cmd.colorscheme "ayu-dark"
---vim.cmd.colorscheme "moonfly"
+--vim.cmd.colorscheme "ayu-dark"
+vim.cmd.colorscheme "moonfly"
 --vim.cmd.colorscheme "catppuccin-mocha"
 --vim.cmd.colorscheme "tokyodark"
 --vim.cmd.colorscheme "kanagawa"
