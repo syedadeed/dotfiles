@@ -1,8 +1,9 @@
 PS1='(\u@\h \W)\$ '
 export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
-shopt -s dotglob
 alias b='bluetoothctl'
+alias f='yazi'
+alias t='btop'
 alias u='sudo pacman -Syyu'
 alias bd='z "$OLDPWD"'
 alias cat='bat --wrap=never'
