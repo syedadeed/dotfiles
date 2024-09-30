@@ -53,6 +53,7 @@ up ()
     cd_ls $d
 }
 eval "$(zoxide init bash)"
+eval "$(fzf --bash)"
 bind '"\C-f":"zi\n"'
 bind '"\C-h":"h\n"'
 bind '"\C-x":"force-clear\n"'
