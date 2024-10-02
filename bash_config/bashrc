@@ -3,7 +3,6 @@ export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
 
 alias b='bluetoothctl'
-alias copy='wl-copy'
 alias sr='systemctl soft-reboot'
 alias f='yazi'
 alias t='btop'
