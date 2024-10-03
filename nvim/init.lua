@@ -48,13 +48,13 @@ local function run()
     -- Define the command based on the file type
     local command
     if file_type == "python" then
-        command = "python " .. file_name
+        command = "python '" .. file_name .. "'"
     elseif file_type == "c" then
-        command = "gcc " .. file_name .. " && ./a.out && rm a.out"
+        command = "gcc '" .. file_name .. "' && ./a.out && rm a.out"
     elseif file_type == "cpp" then
-        command = "g++ " .. file_name .. " && ./a.out && rm a.out"
+        command = "g++ '" .. file_name .. "' && ./a.out && rm a.out"
     elseif file_type == "sh" then
-        command = "bash " .. file_name
+        command = "bash '" .. file_name .. "'"
     else
         print("No support for the file type: " .. file_type)
         return
