@@ -1,5 +1,4 @@
-#PS1='(\u@\h \W)\$ '
-PS1=''
+PS1='(\u@\h \W)\$ '
 export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
 
