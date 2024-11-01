@@ -1,0 +1,101 @@
+module = a file containing python code may contain functions, classes, variables etc.
+a module when imported is just an object in the main pyhton file
+importing a module does 2 things
+(1) creats the module object somewhere in memory
+(2) module name is saved in the symbol table of parent file with its value equal to (1)
+
+module objects are instances of "ModuleType" class defined in the "types" module
+you can also assign the memory address of the module object to a variable aka creating an alias
+ex:
+    import hel
+    x = hel
+    print(id(x) == id(hel))
+in order to access the symbol table of hel.py file use the __dict__ attribute(hel.__dict__)
+
+pyhtons import system uses finders and loaders to ressolve import statements
+finders job is to locate a module
+finder:
+    it is a class that contains a find_spec(module_name, path, target=None) method
+    find_spec returns a ModuleSpec object
+    you can access the ModuleSpec attributes of a particular file 
+        by using the __spec__ attribute of the imported module object
+    ModuleSpec has an attribute(loader) which specifies the loader to use
+    ModuleSpec.loader.load_module(module_name) this will return the module object
+
+loaders job is to load that module
+loader:
+    it is a class that contains a load_module(module_name) method
+    the load_module returns the actual module object
+
+if a class implement both the finder and loader methods it is called an importer
+
+python exposes its import system through the "meta_path" attribute of the sys module
+the meta_path is a list of finders, importers
+it has 3 objects by default
+1) an importer object that is responsible for managing builtini imports
+2) ...
+3) a finder object(name = Path_Finder)
+    looks for python modules under diffrent file system paths
+    the list of paths it will look for is store under sys.path
+        this list is initialized on program startup
+        first item in list will be current working directory from where the python cmd is executed
+
+The steps taken by pyhton while resolving an import statement
+1) checks the global cache of already loaded modules for the module object memory location
+    this cache is a dict containing module names as keys & module objects memory location as values
+    sys.modules is the dict which mapes the module names to module objects memory location
+
+2) if the module is not found in the global cache the pyhton import protocol is executed involving finders and loaders
+
+3) then in the current modules namespace the name of the imported module acts as a variable literal holding the memory location of the module object
+
+Note
+if there is already an entry in the sys.modules for a certain name then no further checks are performed
+Example:
+    sys.modules.update({"Func": lambda: print("Hello")})
+    import Func
+    Func() -> Hello
+    type(Func) -> Function not a module object
+
+#Reloading a module
+import importlib
+importlib.reload(module_name)
+
+#Importing a module mannually
+x = sys.meta_path[-1].find_spec("hmm", "/home/adeed/hmm.py").loader.load_module("hmm")
+x.idk() -> runs the idk func in the hmm.py file
+
+
+from module_name import func_from_module
+func_from_module()
+you can also import more than one function
+from module_name import func1, func2
+or you can use
+import module_name
+module_name.func1()
+or instead of writing full Project word you can assign it a nickname.
+import module_name as pro
+pro.func2()
+you can also check all the inbuilt modules provided by python.
+help("modules")
+if the file is not imported then __name__ will store main else it will store the name of the module
+
+A package is a bunch of modules in a directory
+A package has a special __path__ attribute that is equal to the path of the directory
+there are two types of packages 
+1) Regular packages
+    a directory with one __init__.py file inside it and then various modules
+    the dir name becomes the package name
+2) Namespace packages
+    like regular packages except it doesnt have a __init__.py file
+
+You can make a package executable by specyfying a __main__.py file under its directory
+in order to run the package use the -m option of python cmd, python will execute the contents of __main__.py
+
+Syntax for importing modules from a package
+
+import pkg_name.module_name as why
+why.say()
+OR
+from pk_name.module_name import say
+say()
