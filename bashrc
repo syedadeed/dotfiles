@@ -7,7 +7,6 @@ alias b='bluetoothctl'
 alias sr='systemctl soft-reboot'
 alias u='sudo pacman -Syyu'
 alias bd='cd "$OLDPWD"'
-alias cd='cd_ls'
 alias cn='bluetoothctl connect D4:CD:DA:35:A5:E9'
 alias cp='cp -ir'
 alias grep='grep --color=auto'
@@ -21,11 +20,6 @@ alias pi='kitty +kitten icat'
 alias rd='rm -rf'
 alias sl='sudo btrfs subvolume list -ta'
 alias v='nvim'
-
-cd_ls () 
-{ 
-    cd "$@" && ls --color=auto --hyperlink=auto
-}
 
 force-clear () 
 { 
