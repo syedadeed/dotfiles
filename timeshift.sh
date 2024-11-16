@@ -14,11 +14,19 @@ restore() {
     sudo btrfs subvolume snapshot / /mnt/@system
 }
 
+maintainance(){
+    sudo btrfs balance start --full-balance /
+    sudo btrfs filesystem defragment -r /
+    sudo btrfs scrub start /
+}
+
 if [[ "$1" == "-c" ]]; then
     create "$2"
 elif [[ "$1" == "-r" ]]; then
     restore
+elif [[ "$1" == "-m" ]]; then
+    maintainance
 else
-    echo "Usage: $0 {-c snapshot_name | -r }"
+    echo "Usage: $0 {-c snapshot_name | -r | -m}"
     exit 1
 fi
