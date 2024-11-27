@@ -25,6 +25,7 @@ vim.cmd.colorscheme "ayu-dark"
 --vim.cmd.colorscheme "kanagawa"
 vim.opt.clipboard = "unnamedplus"
 --vim.opt.termguicolors = false
+vim.o.number = true
 vim.wo.relativenumber = true
 
 
