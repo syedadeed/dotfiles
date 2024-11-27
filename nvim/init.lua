@@ -27,6 +27,7 @@ vim.opt.clipboard = "unnamedplus"
 --vim.opt.termguicolors = false
 vim.o.number = true
 vim.wo.relativenumber = true
+--vim.o.scrolloff = 10
 
 
 vim.api.nvim_set_keymap('n', 'e', '$', { noremap = true, silent = true })
