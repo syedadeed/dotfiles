@@ -28,5 +28,5 @@ force-clear ()
 
 eval "$(fzf --bash)"
 
-bind '"\C-x":"force-clear\n"'
+bind -x '"\C-x":"force-clear"'
 bind "set completion-ignore-case on"
