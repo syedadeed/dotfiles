@@ -3,8 +3,6 @@ PS1='(\u@\h \W)\$ '
 export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
 
-set bell-style none
-
 alias b='bluetoothctl'
 alias sr='systemctl soft-reboot'
 alias u='sudo pacman -Syyu'
