@@ -18,11 +18,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-vim.cmd.colorscheme "ayu-dark"
+--vim.cmd.colorscheme "ayu-dark"
 --vim.cmd.colorscheme "moonfly"
 --vim.cmd.colorscheme "catppuccin-mocha"
 --vim.cmd.colorscheme "tokyodark"
---vim.cmd.colorscheme "kanagawa"
+vim.cmd.colorscheme "kanagawa-wave"
 vim.opt.clipboard = "unnamedplus"
 --vim.opt.termguicolors = false
 vim.o.number = true
