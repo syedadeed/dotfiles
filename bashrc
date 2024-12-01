@@ -30,3 +30,4 @@ eval "$(fzf --bash)"
 
 bind -x '"\C-x":"force-clear"'
 bind "set completion-ignore-case on"
+export OMP_NUM_THREADS=4
