@@ -25,7 +25,6 @@ force-clear ()
 { 
     printf "\e[H\e[3J"
 }
-eval "$(fzf --bash)"
 
 bind -x '"\C-x":"force-clear"'
 bind "set completion-ignore-case on"
