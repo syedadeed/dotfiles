@@ -57,6 +57,8 @@ local function run()
         command = "g++ '" .. file_name .. "' && ./a.out && rm a.out"
     elseif file_type == "sh" then
         command = "bash '" .. file_name .. "'"
+    elseif file_type == "lua" then
+        command = "lua " .. file_name
     else
         print("No support for the file type: " .. file_type)
         return
