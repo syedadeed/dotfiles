@@ -3,4 +3,4 @@ require("vim_options")
 require("code_runer")
 require("hl_yank")
 require("key_binds")
-vim.cmd.colorscheme "ayu-dark"
+vim.cmd.colorscheme("ayu-dark")
