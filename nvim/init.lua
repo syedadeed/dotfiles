@@ -1,5 +1,5 @@
-require("config/lazy_setup")
 require("config/vim_options")
+require("config/lazy_setup")
 require("config/code_runer")
 require("config/hl_yank")
 require("config/key_binds")
