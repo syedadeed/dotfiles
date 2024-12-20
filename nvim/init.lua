@@ -1,23 +1,18 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.wo.wrap = not vim.wo.wrap
+--Options
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.wrap = false
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.clipboard = "unnamedplus"
+vim.opt.termguicolors = true
+vim.opt.virtualedit = "block"
+vim.opt.inccommand = "split"
 
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.api.nvim_set_hl(0, 'CustomYankHighlight', {
-      fg = '#ffffff',
-      bg = '#32557d',
-    })
-
-    vim.highlight.on_yank({
-      higroup = 'CustomYankHighlight',
-      timeout = 150,
-    })
-  end
-})
-
+--Lazy Setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -30,32 +25,9 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup("plugins")
-vim.cmd.colorscheme "ayu-dark"
---vim.cmd.colorscheme "moonfly"
---vim.cmd.colorscheme "catppuccin-mocha"
---vim.cmd.colorscheme "tokyodark"
---vim.cmd.colorscheme "kanagawa-wave"
-vim.opt.clipboard = "unnamedplus"
---vim.opt.termguicolors = false
-vim.o.number = true
-vim.wo.relativenumber = true
---vim.o.scrolloff = 10
 
-
-vim.api.nvim_set_keymap('n', 'e', '$', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'e', '$', { noremap = true, silent = true })
-vim.keymap.set('n', '<Tab>', ':bn<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-w>', ':bdelete!<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-t>', ':enew<CR>', { noremap = true, silent = true })
-
---vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
---    vim.lsp.diagnostic.on_publish_diagnostics, {
---        virtual_text = false
---    }
---)
------------------------------------------------------------------------------------------------------
+--Code run
 local function run()
     -- Get the current buffer's file name and file type
     local file_name = vim.api.nvim_buf_get_name(0)
@@ -89,7 +61,35 @@ local function run()
     vim.api.nvim_chan_send(vim.b.terminal_job_id, command .. "\n")
 end
 
+-- highlight text when yanked
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.api.nvim_set_hl(0, 'CustomYankHighlight', {
+      fg = '#ffffff',
+      bg = '#32557d',
+    })
+
+    vim.highlight.on_yank({
+      higroup = 'CustomYankHighlight',
+      timeout = 150,
+    })
+  end
+})
+
+vim.cmd.colorscheme "ayu-dark"
+
+vim.api.nvim_set_keymap('n', 'e', '$', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'e', '$', { noremap = true, silent = true })
+vim.keymap.set('n', '<Tab>', ':bn<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>', ':bdelete!<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-t>', ':enew<CR>', { noremap = true, silent = true })
+
 vim.api.nvim_create_user_command("Run", run, {})
 
 vim.api.nvim_set_keymap("n", "<C-d>", ":Run<CR>", { noremap = true, silent = true })
------------------------------------------------------------------------------------------------------
+
+--vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+--    vim.lsp.diagnostic.on_publish_diagnostics, {
+--        virtual_text = false
+--    }
+--)
