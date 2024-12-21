@@ -11,3 +11,4 @@ vim.opt.termguicolors = true
 vim.opt.virtualedit = "block"
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
+vim.opt.incsearch = false
