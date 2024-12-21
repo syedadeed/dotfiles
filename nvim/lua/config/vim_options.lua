@@ -13,3 +13,4 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.incsearch = false
 vim.opt.tildeop = true
+vim.opt.wrapscan = false
