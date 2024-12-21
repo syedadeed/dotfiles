@@ -10,3 +10,4 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 vim.opt.virtualedit = "block"
 vim.opt.inccommand = "split"
+vim.opt.cursorline = true
