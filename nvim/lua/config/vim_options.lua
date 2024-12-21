@@ -12,3 +12,4 @@ vim.opt.virtualedit = "block"
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.incsearch = false
+vim.opt.tildeop = true
