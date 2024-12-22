@@ -5,7 +5,8 @@ return {
             theme = "auto"
         },
         sections = {
-            lualine_b = {"tabs"}
+            lualine_b = {{"tabs", mode = 1}},
+            lualine_c = {}
         }
     }
 }
