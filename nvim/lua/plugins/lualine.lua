@@ -3,6 +3,9 @@ return {
     opts = {
         options = {
             theme = "auto"
+        },
+        sections = {
+            lualine_b = {"tabs"}
         }
     }
 }
