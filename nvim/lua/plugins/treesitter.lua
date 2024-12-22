@@ -17,6 +17,23 @@ return {
                         node_decremental = "<Leader>sd",
                     }
                 },
+                textobjects = {
+                    select = {
+                        enable = true,
+                        lookahead = true,
+                        keymaps = {
+                            ["af"] = "@function.outer",
+                            ["if"] = "@function.inner",
+                            ["ac"] = "@conditional.outer",
+                            ["ic"] = "@conditional.inner",
+                            ["al"] = "@loop.outer",
+                            ["il"] = "@loop.inner",
+                            ["ae"] = "@class.outer",
+                            ["ie"] = "@class.inner"
+                        }
+                    },
+                    move = {}
+                }
             })
         end
     },
