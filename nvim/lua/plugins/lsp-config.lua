@@ -1,27 +1,20 @@
 return{
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		opts = {auto_install = true},
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {"lua_ls", "pylsp", "clangd"}
-			})
-		end
-	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({capabilities = capabilities})
-			lspconfig.pylsp.setup({capabilities = capabilities})
-			lspconfig.clangd.setup({capabilities = capabilities})
-		end
-	}
+    {
+        "neovim/nvim-lspconfig",
+    },
+    {
+        "williamboman/mason.nvim",
+        opts = {},
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = {"mason.nvim"},
+        config = function()
+            require("mason-lspconfig").setup_handlers({
+                function (server_name)
+                    require("lspconfig")[server_name].setup({})
+                end
+            })
+        end
+    }
 }

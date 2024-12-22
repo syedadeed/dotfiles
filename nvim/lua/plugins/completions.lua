@@ -48,9 +48,6 @@ return {
         }, {
           { name = "buffer" },
         }),
-        formatting = {
-            format = require("nvim-highlight-colors").format
-        },
     })
     end,
   },
