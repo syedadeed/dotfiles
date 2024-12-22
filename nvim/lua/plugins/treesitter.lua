@@ -31,8 +31,7 @@ return {
                             ["ae"] = "@class.outer",
                             ["ie"] = "@class.inner"
                         }
-                    },
-                    move = {}
+                    }
                 }
             })
         end
