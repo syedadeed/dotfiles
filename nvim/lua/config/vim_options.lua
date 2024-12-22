@@ -14,3 +14,6 @@ vim.opt.cursorline = true
 vim.opt.incsearch = false
 vim.opt.tildeop = true
 vim.opt.wrapscan = false
+vim.opt.wildignorecase = true
+vim.opt.cedit = "<C-Q>"
+vim.opt.confirm = true
