@@ -9,3 +9,5 @@ vim.keymap.set("n", "<C-Space>", ":Telescope find_files<CR>", {silent = true})
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "D", vim.lsp.buf.definition, {})
 vim.keymap.set({"n", "v"}, "C", vim.lsp.buf.code_action, {})
+
+-- keymaps can also be found in treesitter.lua
