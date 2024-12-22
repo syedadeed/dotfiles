@@ -17,3 +17,7 @@ vim.opt.wrapscan = false
 vim.opt.wildignorecase = true
 vim.opt.cedit = "<C-Q>"
 vim.opt.confirm = true
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldenable = false
+vim.opt.foldminlines = 10
