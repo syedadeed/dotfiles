@@ -11,4 +11,4 @@ vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, {})
 vim.keymap.set('n', '<Tab>', ':tabnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = true, silent = true })
 
--- keymaps can also be found in treesitter.lua(<Leader>(ss,sn,sp,sc), [operation][{a/i}f,c,l,e])
+-- keymaps can also be found in core.lua(<Leader>(ss,sn,sp,sc), [operation][{a/i}f,c,l,e])
