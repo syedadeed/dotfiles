@@ -3,8 +3,10 @@ vim.keymap.set("n", "<C-e>", ":Neotree filesystem toggle left<CR>", {silent = tr
 vim.keymap.set("n", "<C-Space>", ":Telescope find_files<CR>", {silent = true})
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "D", vim.lsp.buf.definition, {})
-vim.keymap.set({"n", "v"}, "C", vim.lsp.buf.code_action, {})
+vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
+vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
+vim.keymap.set({"n", "v"}, "<Leader>ca", vim.lsp.buf.code_action, {})
+vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, {})
 
 vim.keymap.set('n', '<Tab>', ':tabnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = true, silent = true })
