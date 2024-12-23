@@ -22,4 +22,5 @@ vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldenable = false
 vim.opt.foldminlines = 10
 vim.opt.showtabline = 0
+vim.o.laststatus = 0
 vim.g.mapleader = " "
