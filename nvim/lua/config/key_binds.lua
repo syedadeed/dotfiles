@@ -47,7 +47,7 @@ vim.keymap.set("n", "<Leader>sh", ":new<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>sv", ":vnew<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>sc", ":close<CR>", {silent = true})
 
-vim.keymap.set("n", "<Leader>tn", ":tabnew<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>to", ":tabnew<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>nn", ":tabnext<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>pp", ":tabprevious<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>tc", ":tabclose<CR>", {silent = true})
