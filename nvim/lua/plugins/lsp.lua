@@ -17,6 +17,11 @@ return {
                     require("lspconfig")[server_name].setup({capabilities = capabs})
                 end
             })
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
+            vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
+            vim.keymap.set({"n", "v"}, "<Leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, {})
         end
     }
 }

@@ -1,11 +1,5 @@
-vim.api.nvim_set_keymap("n", "<C-d>", ":Run<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-e>", ":Neotree filesystem toggle left<CR>", {silent = true})
-vim.keymap.set("n", "<C-Space>", ":Telescope find_files<CR>", {silent = true})
-
-vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
-vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
-vim.keymap.set({"n", "v"}, "<Leader>ca", vim.lsp.buf.code_action, {})
-vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, {})
-
--- keymaps can also be found in core.lua(<Leader>(ss,sn,sp,sc), [operation][{a/i}f,c,l,e])
+-- keymaps can also be found in treesitter.lua
+-- keymaps can also be found in lsp.lua
+-- keymaps can also be found in code_runner.lua
+-- keymaps can also be found in completions.lua
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {virtual_text = false })
