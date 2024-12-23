@@ -72,3 +72,5 @@ vim.keymap.set("n", "<C-l>", "<C-W>l", {silent = true})
 
 vim.keymap.set("n", "<C-n>", ":cnext<CR>", {silent = true})
 vim.keymap.set("n", "<C-p>", ":cprevious<CR>", {silent = true})
+
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", {silent = true})
