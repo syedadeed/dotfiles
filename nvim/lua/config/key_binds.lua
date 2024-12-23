@@ -39,6 +39,15 @@ keymaps can be found in comment_operator.lua:
 
     gcc for toggling commenting a single line using a line comment
     gbc for toggling commenting a single line using a block comment
+
+keymaps can be found in telescope.lua:
+    vim.keymap.set("n", "<C- >", require("telescope.builtin").find_files)
+
+keymaps can be found in neo-tree.lua:
+    vim.keymap.set("n", "<C-e>", ":Neotree filesystem toggle left<CR>", {silent = true})
+
+keymaps can be found in git_integration.lua:
+    :TODO
 --]]
 
 vim.keymap.set("n", "<Leader>nl", ":nohl<CR>", {silent = true})
