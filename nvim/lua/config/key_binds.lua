@@ -32,6 +32,13 @@ keymaps can be found in completions.lua:
 
 keymaps can be found in maximize_window.lua:
     vim.keymap.set("n", "<Leader>mm", ":MaximizerToggle<CR>", {silent = true})
+
+keymaps can be found in comment_operator.lua:
+    gc operator used for toggling line comments
+    gb operator used for toggling block comment
+
+    gcc for toggling commenting a single line using a line comment
+    gbc for toggling commenting a single line using a block comment
 --]]
 
 vim.keymap.set("n", "<Leader>nl", ":nohl<CR>", {silent = true})
