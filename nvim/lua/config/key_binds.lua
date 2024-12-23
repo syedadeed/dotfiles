@@ -29,6 +29,9 @@ keymaps can be found in completions.lua:
     ["<C-Space>"] = cmp.mapping.complete()
     ["<C-q>"] = cmp.mapping.abort()
     ["<CR>"] = cmp.mapping.confirm({ select = true })
+
+keymaps can be found in maximize_window.lua:
+    vim.keymap.set("n", "<Leader>mm", ":MaximizerToggle<CR>", {silent = true})
 --]]
 
 vim.keymap.set("n", "<Leader>nl", ":nohl<CR>", {silent = true})

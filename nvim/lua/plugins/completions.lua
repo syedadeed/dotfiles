@@ -25,5 +25,5 @@ return {
                 {name = "path"}
             })
         })
-    end,
+    end
 }
