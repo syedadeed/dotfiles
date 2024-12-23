@@ -1,3 +1,4 @@
 stevearc/dressing.nvim
 akinsho/bufferline.nvim
 nvim-lualine/lualine.nvim
+rachartier/tiny-inline-diagnostic.nvim
