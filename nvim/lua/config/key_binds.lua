@@ -1,5 +1,52 @@
--- keymaps can also be found in treesitter.lua
--- keymaps can also be found in lsp.lua
--- keymaps can also be found in code_runner.lua
--- keymaps can also be found in completions.lua
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {virtual_text = false })
+--[[
+keymaps can be found in treesitter.lua:
+    init_selection = "<Leader>ss"
+    node_incremental = "<Leader>sn"
+    node_decremental = "<Leader>sp"
+
+    ["af"] = "@function.outer",
+    ["if"] = "@function.inner",
+    ["ac"] = "@conditional.outer",
+    ["ic"] = "@conditional.inner",
+    ["al"] = "@loop.outer",
+    ["il"] = "@loop.inner",
+    ["ae"] = "@class.outer",
+    ["ie"] = "@class.inner"
+
+keymaps can be found in lsp.lua:
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
+            vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
+            vim.keymap.set({"n", "v"}, "<Leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, {})
+
+keymaps can be found in code_runner.lua:
+    vim.api.nvim_set_keymap("n", "<C-D>", ":Run<CR>", {silent = true})
+
+keymaps can be found in completions.lua:
+    ["<C-b>"] = cmp.mapping.scroll_docs(-4)
+    ["<C-f>"] = cmp.mapping.scroll_docs(4)
+    ["<C-Space>"] = cmp.mapping.complete()
+    ["<C-q>"] = cmp.mapping.abort()
+    ["<CR>"] = cmp.mapping.confirm({ select = true })
+--]]
+
+vim.keymap.set("n", "<Leader>nl", ":nohl<CR>", {silent = true})
+
+vim.keymap.set("n", "<Leader>sh", ":new<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>sv", ":vnew<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>sc", ":close<CR>", {silent = true})
+
+vim.keymap.set("n", "<Leader>tn", ":tabnew<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>nn", ":tabnext<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>pp", ":tabprevious<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>tc", ":tabclose<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>tt", ":tabnew %<CR>", {silent = true})
+
+vim.keymap.set("n", "<tab>", ":bnext<CR>", {silent = true})
+vim.keymap.set("n", "<C-c>", ":bdelete<CR>", {silent = true})
+
+vim.keymap.set("n", "<C-h>", "<C-W>h", {silent = true})
+vim.keymap.set("n", "<C-j>", "<C-W>j", {silent = true})
+vim.keymap.set("n", "<C-k>", "<C-W>k", {silent = true})
+vim.keymap.set("n", "<C-l>", "<C-W>l", {silent = true})
