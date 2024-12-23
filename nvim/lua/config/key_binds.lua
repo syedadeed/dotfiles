@@ -1,8 +1,8 @@
 --[[
 keymaps can be found in treesitter.lua:
     init_selection = "<Leader>ss"
-    node_incremental = "<Leader>sn"
-    node_decremental = "<Leader>sp"
+    node_incremental = "<Leader>ss"
+    node_decremental = "<bs>"
 
     ["af"] = "@function.outer",
     ["if"] = "@function.inner",
