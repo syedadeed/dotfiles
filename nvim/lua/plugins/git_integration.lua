@@ -1,10 +1,3 @@
 return {
-	{
-		"tpope/vim-fugitive"
-	},
-	{
-		"lewis6991/gitsigns.nvim",
-        enabled = false,
-        opts = {}
-	}
+    "tpope/vim-fugitive"
 }
