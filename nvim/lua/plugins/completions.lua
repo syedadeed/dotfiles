@@ -1,16 +1,7 @@
 return {
     {
         "hrsh7th/cmp-nvim-lsp",
-        config = function ()
-            --vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {virtual_text = false })
-        end
-    },
-    {
-        "L3MON4D3/LuaSnip",
-        dependencies = {
-            "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
-        },
+        opts = {}
     },
     {
         "hrsh7th/nvim-cmp",
@@ -18,14 +9,7 @@ return {
             local cmp = require("cmp")
             local cmp_autopairs = require("nvim-autopairs.completion.cmp")
             cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-            require("luasnip.loaders.from_vscode").lazy_load()
-
             cmp.setup({
-                snippet = {
-                    expand = function(args)
-                        require("luasnip").lsp_expand(args.body)
-                    end,
-                },
                 window = {
                     completion = cmp.config.window.bordered(),
                     documentation = cmp.config.window.bordered(),
@@ -37,12 +21,7 @@ return {
                     ["<C-q>"] = cmp.mapping.abort(),
                     ["<CR>"] = cmp.mapping.confirm({ select = true }),
                 }),
-                sources = cmp.config.sources({
-                    { name = "nvim_lsp" },
-                    { name = "luasnip" }, -- For luasnip users.
-                }, {
-                    { name = "buffer" },
-                }),
+                sources = cmp.config.sources({{name = "nvim_lsp"}}, {{name = "buffer"}}),
             })
         end,
     }
