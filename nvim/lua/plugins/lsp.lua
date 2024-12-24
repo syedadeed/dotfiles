@@ -10,6 +10,12 @@ return {
                 local capabs = require("cmp_nvim_lsp").default_capabilities()
                 capabs.textDocument.completion.completionItem.snippetSupport = false
                 require("lspconfig")[server_name].setup({capabilities = capabs})
+            end,
+            ["ts_ls"] = function ()
+                require("lspconfig").ts_ls.setup({
+                    capabilities = require("cmp_nvim_lsp").default_capabilities(),
+                    init_options = {preferences = {disableSuggestions = true}}
+                })
             end
         })
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
