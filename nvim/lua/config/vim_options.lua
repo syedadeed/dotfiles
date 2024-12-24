@@ -12,7 +12,6 @@ vim.opt.virtualedit = "block"
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.tildeop = true
-vim.opt.wrapscan = false
 vim.opt.wildignorecase = true
 vim.opt.cedit = "<C-Q>"
 vim.opt.confirm = true
