@@ -15,6 +15,8 @@ local function run()
         command = "bash '" .. file_name .. "'"
     elseif file_type == "lua" then
         command = "lua '" .. file_name .. "'"
+    elseif file_type == "javascript" then
+        command = "node '" .. file_name .. "'"
     else
         print("No support for the file type: " .. file_type)
         return
