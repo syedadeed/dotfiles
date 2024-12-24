@@ -17,6 +17,8 @@ local function run()
         command = "lua '" .. file_name .. "'"
     elseif file_type == "javascript" then
         command = "node '" .. file_name .. "'"
+    elseif file_type == "typescript" then
+        command = "tsc '" .. file_name .. "' --outFile transpiled.js && node transpiled.js && rm transpiled.js"
     else
         print("No support for the file type: " .. file_type)
         return
