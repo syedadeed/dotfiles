@@ -7,14 +7,14 @@ local function run()
     local command
     if file_type == "python" then
         command = "python '" .. file_name .. "'"
+    elseif file_type == "lua" then
+        command = "lua '" .. file_name .. "'"
+    elseif file_type == "sh" then
+        command = "bash '" .. file_name .. "'"
     elseif file_type == "c" then
         command = "gcc '" .. file_name .. "' && ./a.out && rm a.out"
     elseif file_type == "cpp" then
         command = "g++ '" .. file_name .. "' && ./a.out && rm a.out"
-    elseif file_type == "sh" then
-        command = "bash '" .. file_name .. "'"
-    elseif file_type == "lua" then
-        command = "lua '" .. file_name .. "'"
     elseif file_type == "javascript" then
         command = "node '" .. file_name .. "'"
     elseif file_type == "typescript" then
