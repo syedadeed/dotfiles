@@ -52,8 +52,8 @@ keymaps can be found in git_integration.lua:
 
 vim.keymap.set("n", "<Leader>nl", ":nohl<CR>", {silent = true})
 
-vim.keymap.set("n", "<Leader>sh", ":new<CR>", {silent = true})
-vim.keymap.set("n", "<Leader>sv", ":vnew<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>sh", ":split<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>sv", ":vsplit<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>sc", ":close<CR>", {silent = true})
 
 vim.keymap.set("n", "<Leader>to", ":tabnew<CR>", {silent = true})
