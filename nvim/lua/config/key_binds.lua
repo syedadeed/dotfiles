@@ -44,7 +44,7 @@ keymaps can be found in telescope.lua:
     vim.keymap.set("n", "<C- >", require("telescope.builtin").find_files)
 
 keymaps can be found in neo-tree.lua:
-    vim.keymap.set("n", "<C-e>", ":Neotree filesystem toggle float<CR>", {silent = true})
+    vim.keymap.set("n", "<C-e>", ":Neotree filesystem toggle<CR>", {silent = true})
 
 keymaps can be found in git_integration.lua:
     :TODO
