@@ -15,7 +15,8 @@ return {
                 keymaps = {
                     init_selection = "<Leader>ss",
                     node_incremental = "<Leader>ss",
-                    node_decremental = "<bs>"
+                    node_decremental = "<bs>",
+                    scope_incremental = false
                 }
             },
             textobjects = {
