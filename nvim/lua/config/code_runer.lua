@@ -21,10 +21,6 @@ local function run()
         command = "tsc '" .. file_name .. "' --outFile transpiled.js && node transpiled.js && rm transpiled.js"
     elseif file_type == "go" then
         command = "go run '" .. file_name .. "'"
-    elseif file_type == "java" then
-        command = "java '" .. file_name .. "'"
-    elseif file_type == "kotlin" then
-        command = "kotlinc '" .. file_name .. "' -include-runtime -d a.jar && kotlin a.jar && rm a.jar"
     else
         print("No support for the file type: " .. file_type)
         return
