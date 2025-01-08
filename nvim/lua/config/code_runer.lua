@@ -18,7 +18,7 @@ local function run()
     elseif file_type == "javascript" then
         command = "node '" .. file_name .. "'"
     elseif file_type == "typescript" then
-        command = "tsc '" .. file_name .. "' --outFile transpiled.js && node transpiled.js && rm transpiled.js"
+        command = "node '" .. file_name .. "'"
     elseif file_type == "go" then
         command = "go run '" .. file_name .. "'"
     else
