@@ -64,6 +64,7 @@ vim.keymap.set("n", "<Leader>tt", ":tabnew %<CR>", {silent = true})
 
 vim.keymap.set("n", "<tab>", ":bnext<CR>", {silent = true})
 vim.keymap.set("n", "<C-c>", ":bdelete<CR>", {silent = true})
+vim.keymap.set("n", "<Leader>bo", ":enew<CR>", {silent = true})
 
 vim.keymap.set("n", "<C-h>", "<C-W>h", {silent = true})
 vim.keymap.set("n", "<C-j>", "<C-W>j", {silent = true})
