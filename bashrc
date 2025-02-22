@@ -20,6 +20,7 @@ alias pi='kitty +kitten icat'
 alias rd='rm -rf'
 alias sl='sudo btrfs subvolume list -ta'
 alias v='nvim'
+alias w='hyprctl clients -j | python -c "import sys, json; data = json.load(sys.stdin); print(len(data))"'
 
 force-clear () 
 { 
