@@ -11,7 +11,6 @@ vim.opt.termguicolors = true
 vim.opt.virtualedit = "block"
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
-vim.opt.tildeop = true
 vim.opt.wildignorecase = true
 vim.opt.cedit = "<C-Q>"
 vim.opt.foldmethod = 'expr'
