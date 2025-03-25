@@ -5,7 +5,9 @@ local function run()
 
     -- Define the command based on the file type
     local command
-    if file_type == "python" then
+    if vim.fn.filereadable(vim.fn.getcwd() .. "/" .. "run.sh") then
+        command = "bash run.sh"
+    elseif file_type == "python" then
         command = "python '" .. file_name .. "'"
     elseif file_type == "lua" then
         command = "lua '" .. file_name .. "'"
