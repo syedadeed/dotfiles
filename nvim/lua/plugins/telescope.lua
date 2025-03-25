@@ -9,7 +9,7 @@ return {
     config = function ()
         require("telescope").setup({
             defaults = {
-                file_ignore_patterns = {"node_modules", "__pycache__", "env", "%.otf", "%.ttf", "%.dat", "%.png", "%.jpg", "%.webp"}
+                file_ignore_patterns = {"node_modules", "__pycache__", "env", "%.otf", "%.ttf", "%.dat", "%.png", "%.jpg", "%.webp", "build/"}
             }
         })
         vim.keymap.set("n", "<C- >", require("telescope.builtin").find_files)
