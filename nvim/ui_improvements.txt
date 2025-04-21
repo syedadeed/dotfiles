@@ -4,3 +4,14 @@ nvim-lualine/lualine.nvim
 rachartier/tiny-inline-diagnostic.nvim
 sethen/line-number-change-mode.nvim
 b0o/incline.nvim
+
+clangd
+css-lsp
+docker-compose-language-service
+dockerfile-language-server
+gopls
+html-lsp
+lua-language-server
+mesonlsp
+pyright
+typescript-language-server
