@@ -62,7 +62,6 @@ vim.keymap.set("n", "<Leader>pp", ":tabprevious<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>tc", ":tabclose<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>tt", ":tabnew %<CR>", {silent = true})
 
-vim.keymap.set("n", "<tab>", ":bnext<CR>", {silent = true})
 vim.keymap.set("n", "<C-c>", ":bdelete<CR>", {silent = true})
 vim.keymap.set("n", "<Leader>bo", ":enew<CR>", {silent = true})
 
