@@ -2,20 +2,31 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = {
         {"williamboman/mason.nvim", opts = {}},
-        "neovim/nvim-lspconfig"
+        "neovim/nvim-lspconfig",
+        "b0o/schemastore.nvim"
     },
     config = function()
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
         require("mason-lspconfig").setup({
             function (server_name)
-                local capabs = require("cmp_nvim_lsp").default_capabilities()
-                require("lspconfig")[server_name].setup({capabilities = capabs})
-            end,
-            ["ts_ls"] = function ()
-                require("lspconfig").ts_ls.setup({
-                    capabilities = require("cmp_nvim_lsp").default_capabilities(),
-                    init_options = {preferences = {disableSuggestions = true}}
-                })
+                require("lspconfig")[server_name].setup({capabilities = capabilities})
             end
+        })
+        vim.lsp.config("lua_ls", {
+            capabilities = capabilities,
+            settings = {Lua = {workspace = {library = vim.api.nvim_get_runtime_file("", true)}}}
+        })
+        vim.lsp.config("ts_ls", {
+            capabilities = capabilities,
+            init_options = {preferences = {disableSuggestions = true}}
+        })
+        vim.lsp.config("jsonls", {
+            capabilities = capabilities,
+            settings = {json = {schemas = require("schemastore").json.schemas()}}
+        })
+        vim.lsp.config("yamlls", {
+            capabilities = capabilities,
+            settings = {yaml = {schemaStore = {enable = false, url = ""}, schemas = require('schemastore').yaml.schemas()}}
         })
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
         vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
