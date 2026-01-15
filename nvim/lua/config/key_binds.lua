@@ -21,7 +21,10 @@ keymaps can be found in lsp.lua:
             vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, {})
 
 keymaps can be found in code_runner.lua:
-    vim.api.nvim_set_keymap("n", "<C-D>", ":Run<CR>", {silent = true})
+    vim.keymap.set("n", "<C-D>", run, {silent = true})
+
+keymaps can be found in cycle_buff.lua:
+    vim.keymap.set("n", "<Tab>", cycle_buff, {silent = true})
 
 keymaps can be found in completions.lua:
     ["<C-b>"] = cmp.mapping.scroll_docs(-4)
@@ -29,6 +32,8 @@ keymaps can be found in completions.lua:
     ["<C-Space>"] = cmp.mapping.complete()
     ["<C-q>"] = cmp.mapping.abort()
     ["<CR>"] = cmp.mapping.confirm({ select = true })
+    ["<C-l>"] = cmp.mapping(function() if luasnip.expand_or_jumpable() then luasnip.expand_or_jump() end end, {"i", "s"})
+    ["<C-h>"] = cmp.mapping(function() if luasnip.jumpable(-1) then luasnip.jump(-1) end end, {"i", "s"})
 
 keymaps can be found in maximize_window.lua:
     vim.keymap.set("n", "<Leader>mm", ":MaximizerToggle<CR>", {silent = true})

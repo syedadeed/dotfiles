@@ -21,4 +21,4 @@ local function cycle_buff()
 end
 
 vim.api.nvim_create_user_command("NextBuff", cycle_buff, {})
-vim.api.nvim_set_keymap("n", "<tab>", ":NextBuff<CR>", {silent = true})
+vim.keymap.set("n", "<Tab>", cycle_buff, {silent = true})

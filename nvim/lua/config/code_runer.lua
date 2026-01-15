@@ -39,4 +39,4 @@ local function run()
     vim.api.nvim_chan_send(vim.b.terminal_job_id, command .. "\n")
 end
 vim.api.nvim_create_user_command("Run", run, {})
-vim.api.nvim_set_keymap("n", "<C-D>", ":Run<CR>", {silent = true})
+vim.keymap.set("n", "<C-D>", run, {silent = true})
