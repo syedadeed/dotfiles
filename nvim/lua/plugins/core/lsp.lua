@@ -7,6 +7,7 @@ return {
     },
     config = function()
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        local schema_store = require("schemastore")
         require("mason-lspconfig").setup({
             function (server_name)
                 require("lspconfig")[server_name].setup({capabilities = capabilities})
@@ -22,11 +23,11 @@ return {
         })
         vim.lsp.config("jsonls", {
             capabilities = capabilities,
-            settings = {json = {schemas = require("schemastore").json.schemas()}}
+            settings = {json = {schemas = schema_store.json.schemas()}}
         })
         vim.lsp.config("yamlls", {
             capabilities = capabilities,
-            settings = {yaml = {schemaStore = {enable = false, url = ""}, schemas = require('schemastore').yaml.schemas()}}
+            settings = {yaml = {schemaStore = {enable = false, url = ""}, schemas = schema_store.yaml.schemas()}}
         })
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
         vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
