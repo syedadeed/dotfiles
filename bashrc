@@ -21,6 +21,10 @@ alias rd='rm -rf'
 alias sl='sudo btrfs subvolume list -ta'
 alias v='nvim'
 alias w='hyprctl clients -j | python -c "import sys, json; data = json.load(sys.stdin); print(len(data))"'
+alias svs='sudo sysctl -w net.ipv4.ip_forward=1; sudo wg-quick up wg0'
+alias tvs='sudo sysctl -w net.ipv4.ip_forward=0; sudo wg-quick down wg0'
+alias cnv='sudo wg-quick up wg1'
+alias dnv='sudo wg-quick down wg1'
 
 force-clear () 
 { 
