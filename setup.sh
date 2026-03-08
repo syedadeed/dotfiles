@@ -11,3 +11,5 @@ ln -s /home/adeed/dotfiles/hypr /home/adeed/.config
 ln -s /home/adeed/dotfiles/kitty /home/adeed/.config
 ln -s /home/adeed/dotfiles/nvim /home/adeed/.config
 ln -s /home/adeed/dotfiles/xremap /home/adeed/.config
+mkdir -p /home/adeed/.config/libvirt
+ln -s /home/adeed/dotfiles/libvirt/libvirt.conf /home/adeed/.config/libvirt/libvirt.conf
