@@ -4,7 +4,6 @@ export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
 
 alias b='bluetoothctl'
-alias sr='systemctl soft-reboot'
 alias u='sudo pacman -Syyu'
 alias bd='cd "$OLDPWD"'
 alias cn='bluetoothctl connect B0:38:E2:9C:06:11'
