@@ -33,7 +33,7 @@ return {
         vim.api.nvim_create_autocmd("FileType", {
             pattern = {"*"},
             callback = function()
-                local ok, _ = pcall(vim.treesitter.start)
+                local ok = pcall(vim.treesitter.start)
                 if ok then
                     vim.wo[0][0].foldmethod = "expr"
                     vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
