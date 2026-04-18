@@ -11,6 +11,7 @@ keymaps can be found in treesitter.lua:
 
 keymaps can be found in lsp.lua:
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "M", vim.diagnostic.open_float, {})
             vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
             vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
             vim.keymap.set({"n", "v"}, "<Leader>ca", vim.lsp.buf.code_action, {})

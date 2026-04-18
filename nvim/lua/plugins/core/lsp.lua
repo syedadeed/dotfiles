@@ -13,6 +13,7 @@ return {
         vim.lsp.config("yamlls", {settings = {yaml = {schemaStore = {enable = false, url = ""}, schemas = schema_store.yaml.schemas()}}})
         require("mason-lspconfig").setup()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+        vim.keymap.set("n", "M", vim.diagnostic.open_float, {})
         vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
         vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
         vim.keymap.set({"n", "v"}, "<Leader>ca", vim.lsp.buf.code_action, {})
