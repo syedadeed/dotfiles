@@ -22,7 +22,7 @@ hl.config({
 
 hl.config({
     decoration = {
-        rounding = 20,
+        rounding = 10,
 
         active_opacity = 1.0,
         fullscreen_opacity = 1.0,
@@ -92,6 +92,20 @@ hl.window_rule({
     size = {"(monitor_w)", "(monitor_h*0.25)"},
     rounding = 0,
     border_size = 0
+})
+
+--File picker window config
+hl.window_rule({
+    match = {class = "xdg-desktop-portal-gtk"},
+    size = {"(monitor_w*0.6)", "(monitor_h*0.7)"},
+    center = true
+})
+
+--Screen share dialog window config
+hl.window_rule({
+    match = {class = "hyprland-share-picker"},
+    size = {"(monitor_w*0.5)", "(monitor_h*0.5)"},
+    center = true
 })
 
 hl.window_rule({
