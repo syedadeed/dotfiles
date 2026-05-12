@@ -11,6 +11,7 @@ return {
         vim.lsp.config("ts_ls", {init_options = {preferences = {disableSuggestions = true}}})
         vim.lsp.config("jsonls", {settings = {json = {schemas = schema_store.json.schemas()}}})
         vim.lsp.config("yamlls", {settings = {yaml = {schemaStore = {enable = false, url = ""}, schemas = schema_store.yaml.schemas()}}})
+        vim.lsp.config("gopls", {cmd_env = {GOEXPERIMENT = "jsonv2"}})
         require("mason-lspconfig").setup()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
         vim.keymap.set("n", "M", vim.diagnostic.open_float, {})
