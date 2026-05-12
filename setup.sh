@@ -11,6 +11,7 @@ ln -s "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
 mkdir -p "$HOME/.config"
 
 ln -s "$HOME/dotfiles/gtk-3.0" "$HOME/.config/gtk-3.0"
+ln -s "$HOME/dotfiles/dconf" "$HOME/.config/dconf"
 ln -s "$HOME/dotfiles/hypr" "$HOME/.config/hypr"
 ln -s "$HOME/dotfiles/kitty" "$HOME/.config/kitty"
 ln -s "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
