@@ -1,0 +1,14 @@
+hl.config({
+    decoration = {
+        blur = {
+            enabled = true,
+            size = 15,
+            passes = 4,
+            noise = 0.05,
+            contrast = 1.5,
+            brightness = 1,
+            vibrancy = 0.1696,
+            vibrancy_darkness = 0.0,
+        }
+    }
+})
