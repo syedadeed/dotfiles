@@ -12,8 +12,6 @@ hl.config({
         gaps_out = 10,
 
         layout = "dwindle",
-
-        resize_on_border = false
     }
 })
 
