@@ -2,14 +2,11 @@ require("system")
 require("blur")
 require("animations")
 require("gestures")
+require("rules")
 
 hl.config({
     general = {
-        border_size = 2,
-        col = {
-            active_border = {colors = {"rgb(16161E)", "rgb(4BA4A3)", "rgb(D56E89)", "rgb(16161E)"}, angle = 45},
-            inactive_border = "rgb(1C1D26)"
-        },
+        border_size = 0,
 
         gaps_in = 4,
         gaps_out = 10,
@@ -39,13 +36,6 @@ hl.config({
 
 hl.config({
     group = {
-        col = {
-            border_active = {colors = {"rgb(16161E)", "rgb(4BA4A3)", "rgb(D56E89)", "rgb(16161E)"}, angle = 45},
-            border_locked_active = {colors = {"rgb(16161E)", "rgb(4BA4A3)", "rgb(D56E89)", "rgb(16161E)"}, angle = 45},
-            border_inactive = "rgb(1C1D26)",
-            border_locked_inactive = "rgb(1C1D26)"
-        },
-
         groupbar = {
             enabled = true,
             render_titles = false,
@@ -54,10 +44,10 @@ hl.config({
             gradients = false,
 
             col = {
-                active = "rgb(d53737)",
-                locked_active = "rgb(922d6e)",
-                inactive = "rgb(8c8789)",
-                locked_inactive = "rgb(8c8789)"
+                active = "#d53737",
+                locked_active = "#922d6e",
+                inactive = "#8c8789",
+                locked_inactive = "#8c8789"
             }
         }
     }
@@ -73,7 +63,7 @@ hl.config({
     misc = {
         disable_hyprland_logo = true,
         disable_splash_rendering = true,
-        background_color = "rgb(000000)",
+        background_color = "#000000",
         on_focus_under_fullscreen = 2
     }
 })
@@ -82,55 +72,4 @@ hl.config({
     cursor = {
         inactive_timeout = 5
     }
-})
-
---Drop Down terminal config
-hl.window_rule({
-    match = {class = "drop_down"},
-    float = true,
-    move = {0, 0},
-    size = {"(monitor_w)", "(monitor_h*0.25)"},
-    rounding = 0,
-    border_size = 0
-})
-
---File picker window config
-hl.window_rule({
-    match = {class = "xdg-desktop-portal-gtk"},
-    size = {"(monitor_w*0.6)", "(monitor_h*0.7)"},
-    center = true
-})
-
---Screen share dialog window config
-hl.window_rule({
-    match = {class = "hyprland-share-picker"},
-    size = {"(monitor_w*0.5)", "(monitor_h*0.5)"},
-    center = true
-})
-
-hl.window_rule({
-    match = {class = "Fuck"},
-    workspace = "special:magic"
-})
-
---Smart gaps
-hl.workspace_rule({
-    workspace = "w[tv1]",
-    gaps_out = 0,
-    gaps_in = 0
-})
-hl.window_rule({
-    match = {float = false, workspace = "w[tv1]"},
-    border_size = 0,
-    rounding = 0
-})
-hl.workspace_rule({
-    workspace = "f[1]",
-    gaps_out = 0,
-    gaps_in = 0
-})
-hl.window_rule({
-    match = {float = false, workspace = "f[1]"},
-    border_size = 0,
-    rounding = 0
 })
