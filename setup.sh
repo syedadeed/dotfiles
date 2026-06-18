@@ -10,6 +10,7 @@ ln -s "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
 
 mkdir -p "$HOME/.config"
 
+ln -s "$HOME/dotfiles/uwsm" "$HOME/.config/uwsm"
 ln -s "$HOME/dotfiles/gtk-3.0" "$HOME/.config/gtk-3.0"
 ln -s "$HOME/dotfiles/dconf" "$HOME/.config/dconf"
 ln -s "$HOME/dotfiles/hypr" "$HOME/.config/hypr"

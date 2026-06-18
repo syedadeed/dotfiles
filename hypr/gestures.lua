@@ -1,11 +1,11 @@
 local mainMod = "SUPER"
 
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("kitty --class drop_down"))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("uwsm app -- kitty --class drop_down"))
 
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("brave"))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("brave --incognito"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("hyprpicker -a"))
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("uwsm app -- kitty"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("uwsm app -- brave"))
+hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- brave --incognito"))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("uwsm app -- hyprpicker -a"))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd("grim - | tee $HOME/$(date +%Y%m%d_%H%M%S).png | wl-copy"))
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | tee $HOME/$(date +%Y%m%d_%H%M%S).png | wl-copy'))
 
@@ -13,7 +13,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.float())
 hl.bind(mainMod .. " + P", hl.dsp.window.pin())
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exit())
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("uwsm stop"))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({direction = "left"}))
