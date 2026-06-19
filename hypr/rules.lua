@@ -18,6 +18,7 @@ hl.window_rule({
 hl.window_rule({
     match = {class = "xdg-desktop-portal-gtk"},
     size = {"(monitor_w*0.6)", "(monitor_h*0.7)"},
+    float = true,
     center = true
 })
 
@@ -25,6 +26,7 @@ hl.window_rule({
 hl.window_rule({
     match = {class = "hyprland-share-picker"},
     size = {"(monitor_w*0.5)", "(monitor_h*0.5)"},
+    float = true,
     center = true
 })
 
