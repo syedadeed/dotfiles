@@ -1,0 +1,35 @@
+replace nvim-cmp with blink.cmp
+replace nvim-autopairs with blink.pairs
+remove numToStr/Comment.nvim
+use mini.ai alongside nvim-treesitter-textobjects
+    use nvim-treesitter-textobjects for the query files
+    use mini.ai to set the required keymaps
+Setup Formatting, Linting, DAP
+Improve config for LSP by taking inspiration from https://www.lazyvim.org/plugins/lsp
+use nvim-ts-autotag if blink.cmp snippet engine is fucked
+Create a better bufDelete function which doesnt fuck up the window layout
+Use nvim-ufo for folds
+Extract the functions you want to use from Snacks.nvim
+See if you wanna use mini.surround
+Use yanky.nvim
+Use dial.nvim
+See if you feel like using kulala.nvim
+
+ui_improvements.txt
+stevearc/dressing.nvim
+akinsho/bufferline.nvim
+nvim-lualine/lualine.nvim
+rachartier/tiny-inline-diagnostic.nvim
+sethen/line-number-change-mode.nvim
+b0o/incline.nvim
+
+clangd
+css-lsp
+docker-compose-language-service
+dockerfile-language-server
+gopls
+html-lsp
+lua-language-server
+mesonlsp
+pyright
+typescript-language-server
