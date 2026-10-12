@@ -4,6 +4,7 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("uwsm app -- kitty --class drop_d
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("uwsm app -- kitty"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("uwsm app -- brave"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm app -- google-chrome-stable"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- brave --incognito"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("uwsm app -- hyprpicker -a"))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd("grim - | tee $HOME/$(date +%Y%m%d_%H%M%S).png | wl-copy"))
