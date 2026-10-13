@@ -5,6 +5,7 @@ export HISTCONTROL="ignoredups:erasedups"
 
 alias b='bluetoothctl'
 alias pp='cat /sys/firmware/acpi/platform_profile'
+alias bc='cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias u='sudo pacman -Syyu'
 alias bd='cd "$OLDPWD"'
 alias cn='bluetoothctl connect B0:38:E2:9C:06:11'

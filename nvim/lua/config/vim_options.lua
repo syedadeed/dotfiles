@@ -19,3 +19,4 @@ vim.opt.foldenable = false
 vim.opt.foldminlines = 10
 vim.opt.winborder = "rounded"
 vim.g.mapleader = " "
+vim.opt.fillchars = {eob = " "}
