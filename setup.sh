@@ -2,6 +2,7 @@
 
 rm "$HOME/.bash_profile"
 rm "$HOME/.bashrc"
+mkdir -p "$HOME/.local/share"
 
 ln -s "$HOME/dotfiles/bash_profile" "$HOME/.bash_profile"
 ln -s "$HOME/dotfiles/bashrc" "$HOME/.bashrc"
@@ -19,4 +20,4 @@ ln -s "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
 ln -s "$HOME/dotfiles/xremap" "$HOME/.config/xremap"
 
 mkdir -p "$HOME/.config/libvirt"
-ln -s "$HOME/dotfiles/libvirt/libvirt.conf" "$HOME/.config/libvirt/libvirt.conf"
+ln -sf "$HOME/dotfiles/libvirt/libvirt.conf" "$HOME/.config/libvirt/libvirt.conf"
