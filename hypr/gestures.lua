@@ -2,6 +2,7 @@ local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("uwsm app -- kitty --class drop_down"))
 
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("uwsm app -- obs"))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("uwsm app -- kitty"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("uwsm app -- brave"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm app -- google-chrome-stable"))
