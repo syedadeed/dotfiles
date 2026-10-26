@@ -4,6 +4,7 @@ export EDITOR="nvim"
 export HISTCONTROL="ignoredups:erasedups"
 
 alias b='bluetoothctl'
+alias f='yazi'
 alias pp='cat /sys/firmware/acpi/platform_profile'
 alias bc='cat /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode'
 alias u='sudo pacman -Syyu'
