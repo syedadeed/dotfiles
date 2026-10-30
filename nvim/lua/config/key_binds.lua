@@ -44,6 +44,7 @@ keymaps can be found in comment_operator.lua:
 
 keymaps can be found in telescope.lua:
     vim.keymap.set("n", "<C- >", require("telescope.builtin").find_files)
+    vim.keymap.set("n", "<C-S- >", require("telescope.builtin").live_grep)
 
 keymaps can be found in neo-tree.lua:
     vim.keymap.set("n", "<C-e>", ":Neotree filesystem toggle<CR>", {silent = true})

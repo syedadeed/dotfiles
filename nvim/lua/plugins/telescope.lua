@@ -13,5 +13,6 @@ return {
             }
         })
         vim.keymap.set("n", "<C- >", require("telescope.builtin").find_files)
+        vim.keymap.set("n", "<C-S- >", require("telescope.builtin").live_grep)
     end
 }
