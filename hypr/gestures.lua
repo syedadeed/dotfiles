@@ -65,7 +65,7 @@ hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({workspace = 10}))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({workspace = "special:magic"}))
 
 hl.bind(mainMod .. " + SHIFT + G", hl.dsp.group.toggle())
-hl.bind(mainMod .. " + G", hl.dsp.group.lock_active())
+hl.bind(mainMod .. " + G", hl.dsp.group.lock())
 
 hl.bind(mainMod .. " + Tab", hl.dsp.group.next())
 
